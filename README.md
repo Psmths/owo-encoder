@@ -1,11 +1,8 @@
-# OwO Encoder
+# OwO Encoder and Decoder
 
-Very simple encoding scheme that will encode data as a series of OwOs or UwUs. The
-encoder is a simple state machine.
+Very simple encoding scheme that will encode data as a series of OwOs or UwUs. The encoder is a simple state machine. The decoder follows a similar state machine, and will convert OwO encrypted strings to plaintext. 
 
-Still needs a decoder too lazy to make it at the moment
-
-Example code:
+Example encoding:
 
 ```
 import owoencode
@@ -17,4 +14,18 @@ Example of output:
 
 ```
 OwouwuOWoOwOOWoUwuOWoUwuOWoUWUoWoowoOwOOWOOWoUWUOWOoWoOWoUwuOWoOwooWoowO
+```
+
+Example decoding:
+
+```
+import owodecode
+encoded_string = "OwouwuOWoOwOOWoUwuOWoUwuOWoUWUoWoowoOwOOWOOWoUWUOWOoWoOWoUwuOWoOwooWoowO"
+print(owodecode.decode(encoded_string))
+```
+
+Example of output:
+
+```
+Hello World!
 ```
